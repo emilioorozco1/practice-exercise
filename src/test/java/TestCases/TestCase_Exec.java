@@ -1,5 +1,6 @@
 package TestCases;
 
+import POM.MagentoStorePage;
 import org.junit.*;
 import org.junit.rules.TestName;
 
@@ -28,21 +29,19 @@ public class TestCase_Exec extends ClsBrowser
     }
 
 
-    @Test
+    @Test //added
     public void FirstTC()
     {
         try
         {
-            ClsReport.objTest = ClsReport.objExtent.createTest("First Test");
-            URL = "https://positionsapp-uat.azurewebsites.net/#";
+            ClsReport.objTest = ClsReport.objExtent.createTest("First Test Case");
+            URL = "http://live.guru99.com/index.php/tv.html";
             NavigateToUrl(URL);
             WaitForLoad();
             ClsReport.fnLog(Status.PASS, "First Log Comment.", false);
-            AtLoginPage objLogin = new AtLoginPage();
-            objLogin.enterCredential();
-            objLogin.startSession();
-            objLogin.keepSessionDialog();
-            objLogin.verifyActiveSession();
+            MagentoStorePage objMag = new MagentoStorePage();
+            //Methods
+            objMag.addToCartLG();
             ClsReport.fnLog(Status.PASS, "Second Log Comment.", true);
         }
         catch(Exception e)
@@ -52,21 +51,23 @@ public class TestCase_Exec extends ClsBrowser
     }
 
 
-    @Test
+    @Test //added
     public void SecondTC()
     {
         try
         {
-            ClsReport.objTest = ClsReport.objExtent.createTest("Second Test");
-            URL = "https://positionsapp-uat.azurewebsites.net/#"; //Changed url
+            ClsReport.objTest = ClsReport.objExtent.createTest("Second Test Case");
+            URL = "http://live.guru99.com/index.php/tv.html";
             NavigateToUrl(URL);
             WaitForLoad();
             ClsReport.fnLog(Status.PASS, "First Log Comment.", false);
-            AtLoginPage objLogin = new AtLoginPage();
-            objLogin.enterCredential();
-            objLogin.startSession();
-            objLogin.keepSessionDialog();
-            objLogin.verifyActiveSession();
+            MagentoStorePage objMag = new MagentoStorePage();
+            objMag.addToCartSamsung();
+            objMag.proceedCheckout();
+            objMag.billingInformation();
+            objMag.shippingMethod();
+            objMag.paymentInformation();
+            objMag.orderReview();
             ClsReport.fnLog(Status.PASS, "Second Log Comment.", true);
         }
         catch (Exception e)
@@ -76,21 +77,19 @@ public class TestCase_Exec extends ClsBrowser
     }
 
 
-    @Test
-    public void NewTest()
+   @Test
+    public void ThirdTC()
     {
         try
         {
-            ClsReport.objTest = ClsReport.objExtent.createTest("Second Test");
-            URL = "https://positionsapp-uat.azurewebsites.net/#"; //Changed url
+            ClsReport.objTest = ClsReport.objExtent.createTest("Third Test Case"); //Changed from second to Third
+            URL = "http://live.guru99.com/index.php/tv.html"; //Changed url
             NavigateToUrl(URL);
             WaitForLoad();
             ClsReport.fnLog(Status.PASS, "First Log Comment.", false);
-            AtLoginPage objLogin = new AtLoginPage();
-            objLogin.enterCredential();
-            objLogin.startSession();
-            objLogin.keepSessionDialog();
-            objLogin.verifyActiveSession();
+            MagentoStorePage objMag = new MagentoStorePage();
+            objMag.navigateToCreateAccount();
+            objMag.fillCreateAccountInfo();
             ClsReport.fnLog(Status.PASS, "Second Log Comment.", true);
         }
         catch (Exception e)
