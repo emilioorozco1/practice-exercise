@@ -10,14 +10,14 @@ public class MagentoStorePage extends ClsBrowser {
     //Locators
     String Name = "Emilio";
     String LastName = "Orozco";
-    String Email = "intern26@at.com";
+    String Email = "intern26@agilethougt.com";
     String Address = "Mi casita";
     String City = "Colima";
     String Zip = "28020";
-    String Telephone = "3125500773";
+    String Telephone = "3125500763";
     String Password = "Holaestoyaburrido123";
 
-    String LGLCDtv ="//body/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/ul[1]/li[1]/div[1]/div[3]/button[1]";
+    String LGLCDtv ="//bodxxsssy/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/ul[1]/li[1]/div[1]/div[3]/button[1]";
     String CheckoutBtn = "//body/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/ul[1]/li[1]/button[1]";
     String GuestContinueBtn = "//button[@id='onepage-guest-register-button']";
     String FirstNameInput = "//input[@id='billing:firstname']";

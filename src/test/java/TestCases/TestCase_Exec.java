@@ -1,6 +1,7 @@
 package TestCases;
 
 import POM.MagentoStorePage;
+import POM.VolarisPage;
 import org.junit.*;
 import org.junit.rules.TestName;
 
@@ -35,14 +36,36 @@ public class TestCase_Exec extends ClsBrowser
         try
         {
             ClsReport.objTest = ClsReport.objExtent.createTest("First Test Case");
-            URL = "http://live.guru99.com/index.php/tv.html";
+            URL = "https://www.volaris.com/";
             NavigateToUrl(URL);
             WaitForLoad();
-            ClsReport.fnLog(Status.PASS, "First Log Comment.", false);
-            MagentoStorePage objMag = new MagentoStorePage();
+            ClsReport.fnLog(Status.PASS, "Navigate to URL.", true);
+            VolarisPage objVolaris = new VolarisPage();
             //Methods
-            objMag.addToCartLG();
-            ClsReport.fnLog(Status.PASS, "Second Log Comment.", true);
+            objVolaris.chooseOrigin();
+            ClsReport.fnLog(Status.PASS, "Choose Origin.", true);
+            objVolaris.chooseDestiny();
+            ClsReport.fnLog(Status.PASS, "Choose Destiny.", true);
+            objVolaris.chooseMonth();
+            ClsReport.fnLog(Status.PASS, "Select month.", true);
+            objVolaris.selectExitDate();
+            ClsReport.fnLog(Status.PASS, "Select exit date.", true);
+            objVolaris.selectReturnDate();
+            ClsReport.fnLog(Status.PASS, "Select return date.", true);
+            objVolaris.selectDateBtn();
+            ClsReport.fnLog(Status.PASS, "Select dates button.", true);
+            objVolaris.searchFlight();
+            ClsReport.fnLog(Status.PASS, "Search flights button.", true);
+            objVolaris.selectLowerPriceFilter();
+            ClsReport.fnLog(Status.PASS, "Set lower price filter.", true);
+            objVolaris.selectFirstFlight();
+            ClsReport.fnLog(Status.PASS, "Select first flight", true);
+            objVolaris.selectFirstFlightcategory();
+            ClsReport.fnLog(Status.PASS, "Select first flight category.", true);
+            objVolaris.selectSecondFlight();
+            ClsReport.fnLog(Status.PASS, "Select second flight.", true);
+            objVolaris.selectSecondFlightcategory();
+            ClsReport.fnLog(Status.PASS, "Select second flight category.", true);
         }
         catch(Exception e)
         {
@@ -51,7 +74,7 @@ public class TestCase_Exec extends ClsBrowser
     }
 
 
-    @Test //added
+    //@Test //added
     public void SecondTC()
     {
         try
@@ -77,7 +100,7 @@ public class TestCase_Exec extends ClsBrowser
     }
 
 
-   @Test
+   //@Test
     public void ThirdTC()
     {
         try

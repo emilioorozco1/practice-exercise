@@ -16,7 +16,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ClsReport
 {
-    public static String reportLocation = "C:\\Report\\Spark.html"; //Uncommented
+    public static String reportLocation = "C:\\Report\\VolarisTC.html"; //Uncommented
     //public static String reportLocation = ""; //Commented
     public static ExtentReports objExtent;
     public static ExtentSparkReporter objSpark;
